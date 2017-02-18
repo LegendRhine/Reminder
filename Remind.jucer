@@ -3,7 +3,7 @@
 <JUCERPROJECT id="uu3kyc" name="Reminder" projectType="guiapp" version="1.0.0"
               bundleIdentifier="SwingCoder" jucerVersion="4.3.1" includeBinaryInAppConfig="1">
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="Ngr5ZL" smallIcon="NEh68E"
+    <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="Ngr5ZL" smallIcon="diSAvT"
                bigIcon="NEh68E">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="SwingRemind"
@@ -48,13 +48,13 @@
   </EXPORTFORMATS>
   <MAINGROUP id="BeOFN5" name="Reminder">
     <GROUP id="{89EB0D53-9D6F-19F4-12E6-978A080DFA4A}" name="BinaryData">
-      <FILE id="NEh68E" name="about.gif" compile="0" resource="1" file="BinaryData/about.gif"/>
+      <FILE id="diSAvT" name="about.png" compile="0" resource="1" file="BinaryData/about.png"/>
       <FILE id="Rrmk9Q" name="loop.ogg" compile="0" resource="1" file="BinaryData/loop.ogg"/>
-      <FILE id="pvVe6k" name="pause.gif" compile="0" resource="1" file="BinaryData/pause.gif"/>
-      <FILE id="KhvAlg" name="setup.gif" compile="0" resource="1" file="BinaryData/setup.gif"/>
-      <FILE id="JZeLNq" name="start.gif" compile="0" resource="1" file="BinaryData/start.gif"/>
-      <FILE id="ye0Tkb" name="stop.gif" compile="0" resource="1" file="BinaryData/stop.gif"/>
-      <FILE id="L0tJos" name="view.gif" compile="0" resource="1" file="BinaryData/view.gif"/>
+      <FILE id="lozLpW" name="pause.png" compile="0" resource="1" file="BinaryData/pause.png"/>
+      <FILE id="IjwlDv" name="setup.png" compile="0" resource="1" file="BinaryData/setup.png"/>
+      <FILE id="ucs2Vi" name="start.png" compile="0" resource="1" file="BinaryData/start.png"/>
+      <FILE id="DjQXHW" name="stop.png" compile="0" resource="1" file="BinaryData/stop.png"/>
+      <FILE id="Ztgcva" name="view.png" compile="0" resource="1" file="BinaryData/view.png"/>
     </GROUP>
     <GROUP id="{29240AC9-83D8-D146-67B7-C6AB398BF282}" name="Source">
       <FILE id="zi27zv" name="DateAndTime.h" compile="0" resource="0" file="Source/DateAndTime.h"/>
