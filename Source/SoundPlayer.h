@@ -1,4 +1,4 @@
-/*
+﻿/*
 ==============================================================================
             Sound playback
 
@@ -6,7 +6,7 @@
     Email: SwingCoder2@gmail.com
     Github: https://github.com/SwingCoder
 
-    License: MIT License, Copyright (c) 2012 by SwingCoder
+    License: MIT License, Copyright (c) 2010 by SwingCoder
 ==============================================================================
 */
 

@@ -1,10 +1,10 @@
-/*
+﻿/*
 ================================================================================
     Author: SwingCoder
     Email: SwingCoder2@gmail.com
     Github: https://github.com/SwingCoder
 
-    Copyright (c) 2012 by SwingCoder
+    Copyright (c) 2010 by SwingCoder
 ================================================================================
 */
 
@@ -42,7 +42,7 @@ void BaseComp::resized()
 //===========================================================================
 void BaseComp::paint (Graphics& g)
 {
-	//g.fillAll (Colours::darkgrey);
+	g.fillAll (Colours::black);
 }
 
 

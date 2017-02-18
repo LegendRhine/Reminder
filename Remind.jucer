@@ -25,7 +25,7 @@
         <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2012 targetFolder="Builds/VisualStudio2012" smallIcon="NEh68E" bigIcon="NEh68E"
+    <VS2012 targetFolder="Builds/VisualStudio2012" smallIcon="diSAvT" bigIcon="diSAvT"
             toolset="v110_xp">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"

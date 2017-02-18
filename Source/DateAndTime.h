@@ -1,23 +1,23 @@
-/*
+ï»¿/*
 ====================================================================================
     Author: SwingCoder
     Email: SwingCoder2@gmail.com
     Github: https://github.com/SwingCoder
 
-    Copyright (c) 2012 by SwingCoder
+    Copyright (c) 2010 by SwingCoder
 ====================================================================================
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
-/** ±¾ÀàµÄ¾²Ì¬º¯ÊıÓÃÓÚ»ñÈ¡µ±Ç°µÄÈÕÆÚºÍÊ±¼ä. */
+/** æœ¬ç±»çš„é™æ€å‡½æ•°ç”¨äºè·å–å½“å‰çš„æ—¥æœŸå’Œæ—¶é—´. */
 class DateAndTime
 {
 public:
     DateAndTime(){}     
     ~DateAndTime() {}
     //==============================================================================
-    /** ·µ»Øµ±Ç°µÄÈÕÆÚ¡¢ĞÇÆÚºÍÊ±¼ä£¬¾«È·µ½Ãë */
+    /** è¿”å›å½“å‰çš„æ—¥æœŸã€æ˜ŸæœŸå’Œæ—¶é—´ï¼Œç²¾ç¡®åˆ°ç§’ */
     static const String getDateAndTime(bool isCN) 
     { 
         String s(String::empty);
@@ -28,23 +28,23 @@ public:
         return s; 
     }
     //==============================================================================
-    /** ·µ»Øµ±Ç°µÄÄêÔÂÈÕ 
-        @param isCN    ÊÇ·ñ·µ»ØÖĞÎÄ×Ö·û´®
+    /** è¿”å›å½“å‰çš„å¹´æœˆæ—¥ 
+        @param isCN    æ˜¯å¦è¿”å›ä¸­æ–‡å­—ç¬¦ä¸²
     */
     static const String getDate(bool isCN)
     {
         Time time(Time::getCurrentTime());
         String s(String::empty);
 
-        s << String(time.getYear()) << (isCN ? L"Äê" : L"-")
-            << String(time.getMonth() + 1) << (isCN ? L"ÔÂ" : L"-")
-            << String(time.getDayOfMonth()) << (isCN ? L"ÈÕ" : String::empty);
+        s << String(time.getYear()) << (isCN ? L"å¹´" : L"-")
+            << String(time.getMonth() + 1) << (isCN ? L"æœˆ" : L"-")
+            << String(time.getDayOfMonth()) << (isCN ? L"æ—¥" : String::empty);
 
         return s;
     }
     //==============================================================================
-    /** ·µ»Øµ±Ç°ĞÇÆÚ¼¸ 
-        @param isCN    ÊÇ·ñ·µ»ØÖĞÎÄ×Ö·û´®
+    /** è¿”å›å½“å‰æ˜ŸæœŸå‡  
+        @param isCN    æ˜¯å¦è¿”å›ä¸­æ–‡å­—ç¬¦ä¸²
     */
     static const String getWeek(bool isCN)
     {
@@ -54,13 +54,13 @@ public:
         {
             switch (time.getDayOfWeek())
             {
-            case 0: return L"ĞÇÆÚÌì";
-            case 1: return L"ĞÇÆÚÒ»";
-            case 2: return L"ĞÇÆÚ¶ş";
-            case 3: return L"ĞÇÆÚÈı";
-            case 4: return L"ĞÇÆÚËÄ";
-            case 5: return L"ĞÇÆÚÎå";
-            case 6: return L"ĞÇÆÚÁù";
+            case 0: return L"æ˜ŸæœŸå¤©";
+            case 1: return L"æ˜ŸæœŸä¸€";
+            case 2: return L"æ˜ŸæœŸäºŒ";
+            case 3: return L"æ˜ŸæœŸä¸‰";
+            case 4: return L"æ˜ŸæœŸå››";
+            case 5: return L"æ˜ŸæœŸäº”";
+            case 6: return L"æ˜ŸæœŸå…­";
             default: break;
             }
         }
@@ -72,9 +72,9 @@ public:
         return String::empty;
     }
     //==============================================================================
-    /** ·µ»Øµ±Ç°Ê±¼ä£¬·µ»ØµÄ×Ö·û´®Îª ¡°08 : 20 : 35 AM¡±.
-        @param is24    ÊÇ·ñ24Ğ¡Ê±ÖÆ. Èç¹ûÎªtrue, Ôò2²ÎÎŞĞ§
-        @param useFlagAmOrPm    ÊÇ·ñÊ¹ÓÃ¡°AM¡±ºÍ¡°PM¡±±ê¼Ç
+    /** è¿”å›å½“å‰æ—¶é—´ï¼Œè¿”å›çš„å­—ç¬¦ä¸²ä¸º â€œ08 : 20 : 35 AMâ€.
+        @param is24    æ˜¯å¦24å°æ—¶åˆ¶. å¦‚æœä¸ºtrue, åˆ™2å‚æ— æ•ˆ
+        @param useFlagAmOrPm    æ˜¯å¦ä½¿ç”¨â€œAMâ€å’Œâ€œPMâ€æ ‡è®°
     */
     static const String getTime(bool is24, bool useFlagAmOrPm)
     {

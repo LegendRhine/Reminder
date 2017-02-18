@@ -4,7 +4,7 @@
     Email: SwingCoder2@gmail.com
     Github: https://github.com/SwingCoder
 
-    Copyright (c) 2012 by SwingCoder
+    Copyright (c) 2010 by SwingCoder
 ====================================================================================
 */
 
@@ -20,7 +20,8 @@ VisualWidgets::VisualWidgets () :
     // add currentTimingLb to display current time..
     currentTimingLb = new Label();
     addAndMakeVisible(currentTimingLb);
-    currentTimingLb->setFont (Font (50.0f, Font::bold));
+    currentTimingLb->setFont (Font (45.0f, Font::bold));
+	currentTimingLb->setColour (Label::textColourId, Colours::lightgrey);
     currentTimingLb->setJustificationType (Justification::centred);
 	currentTimingLb->setText(showTime(), dontSendNotification);
 
@@ -28,6 +29,7 @@ VisualWidgets::VisualWidgets () :
     dateAndTimeLb = new Label();
     addAndMakeVisible(dateAndTimeLb);
     dateAndTimeLb->setFont(Font(18.0f));    
+	dateAndTimeLb->setColour (Label::textColourId, Colours::lightgrey);
     dateAndTimeLb->setJustificationType(Justification::centred);
     dateAndTimeLb->setText(DateAndTime::getDateAndTime(true), dontSendNotification);
 
@@ -35,39 +37,40 @@ VisualWidgets::VisualWidgets () :
     processbar = new ProgressBar(progressValue);
     addAndMakeVisible(processbar);
     processbar->setPercentageDisplay(false);
-    processbar->setColour(ProgressBar::foregroundColourId, Colours::green);
+	processbar->setColour(ProgressBar::foregroundColourId, Colours::cyan);
+	processbar->setColour(ProgressBar::backgroundColourId, Colours::darkgrey.withAlpha(0.6f));
    
     Image img;
 
     // add buttons.
-    for (int i = 0, x = 0; i < NUMS; ++i, x += 58)
+    for (int i = 0, x = 10; i < NUMS; ++i, x += 68)
     {
         bts.add(new ImageButton());
         addAndMakeVisible(bts[i]);
         bts[i]->addListener(this);
-        bts[i]->setBounds(x, 5, 48, 48);
+        bts[i]->setBounds(x, 10, 48, 48);
 
         // get each button's image..
         switch(i)
         {
         case SETUP:
-            img = ImageCache::getFromMemory(BinaryData::setup_gif, BinaryData::setup_gifSize);
+            img = ImageCache::getFromMemory(BinaryData::setup_png, BinaryData::setup_pngSize);
             break;
 
         case VIEW:
-            img = ImageCache::getFromMemory(BinaryData::view_gif, BinaryData::view_gifSize);
+            img = ImageCache::getFromMemory(BinaryData::view_png, BinaryData::view_pngSize);
             break;
 
         case STARTANDPAUSE:
-            img = ImageCache::getFromMemory(BinaryData::start_gif, BinaryData::start_gifSize);
+            img = ImageCache::getFromMemory(BinaryData::start_png, BinaryData::start_pngSize);
             break;
 
         case STOP:
-            img = ImageCache::getFromMemory(BinaryData::stop_gif, BinaryData::stop_gifSize);
+            img = ImageCache::getFromMemory(BinaryData::stop_png, BinaryData::stop_pngSize);
             break;
 
         case ABOUT:
-            img = ImageCache::getFromMemory(BinaryData::about_gif, BinaryData::about_gifSize);
+            img = ImageCache::getFromMemory(BinaryData::about_png, BinaryData::about_pngSize);
             break;
 
         default:
@@ -77,13 +80,14 @@ VisualWidgets::VisualWidgets () :
         // set each button's image..
         bts[i]->setImages(false, false, false, 
             img, 1.0f, Colour(0x0), 
-            img, 1.0f, Colours::yellow.withAlpha(0.3f), 
-            img, 1.0f, Colours::red.withAlpha(0.4f));
+            img, 1.0f, Colours::yellowgreen.withAlpha(0.6f), 
+			img, 1.0f, Colours::yellowgreen.withAlpha(0.6f));
     }
 
     bts[SETUP]->setTooltip(L"设置工作时间");
     bts[STARTANDPAUSE]->setTooltip(L"开始/暂停");
     bts[STOP]->setTooltip(L"停止提醒");
+    bts[VIEW]->setTooltip(L"查看提醒记录");
     bts[ABOUT]->setTooltip(L"关于");
     bts[ABOUT]->addShortcut(KeyPress(KeyPress::spaceKey));
 
@@ -91,13 +95,13 @@ VisualWidgets::VisualWidgets () :
     currentTimingLb->setTooltip(L"剩余时间");
     processbar->setTooltip(L"进度指示条");
 
-    setSize(NUMS * 58, 160);
+    setSize(NUMS * 68, 200);
     setVisible(true);
 
     // position labels and processBar.
-    dateAndTimeLb->setBounds(0, bts[0]->getBottom() + 5 , getWidth(), 25);
-    processbar->setBounds(0, dateAndTimeLb->getBottom() + 5, getWidth(), 10);    
-    currentTimingLb->setBounds(0, processbar->getBottom(), getWidth(), 50);
+    dateAndTimeLb->setBounds(0, bts[0]->getBottom() + 15 , getWidth(), 25);
+    processbar->setBounds(0, dateAndTimeLb->getBottom() + 25, getWidth(), 10);    
+    currentTimingLb->setBounds(0, processbar->getBottom() + 10, getWidth(), 50);
 
     // 记录启动时间点
     String s = DateAndTime::getTime(false, true);
@@ -185,14 +189,14 @@ void VisualWidgets::setImgOfStartBt( bool willStart )
     Image img;
 
     if (willStart)
-        img = ImageCache::getFromMemory(BinaryData::start_gif, BinaryData::start_gifSize);
+        img = ImageCache::getFromMemory(BinaryData::start_png, BinaryData::start_pngSize);
     else
-        img = ImageCache::getFromMemory(BinaryData::pause_gif, BinaryData::pause_gifSize);
+        img = ImageCache::getFromMemory(BinaryData::pause_png, BinaryData::pause_pngSize);
 
     bts[STARTANDPAUSE]->setImages(false, false, false, 
         img, 1.0f, Colour(0x0), 
-        img, 1.0f, Colours::yellow.withAlpha(0.3f), 
-        img, 1.0f, Colours::red.withAlpha(0.4f));
+		img, 1.0f, Colours::yellowgreen.withAlpha(0.6f), 
+        img, 1.0f, Colours::yellowgreen.withAlpha(0.6f));
 }
 //==================================================================================
 const String VisualWidgets::showTime() const
