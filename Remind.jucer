@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="uu3kyc" name="Reminder" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="SwingCoder" jucerVersion="4.3.1" includeBinaryInAppConfig="1">
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="Ngr5ZL" smallIcon="NEh68E"
+               bigIcon="NEh68E">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="SwingRemind"
+                       osxSDK="default" osxCompatibility="10.8 SDK" osxArchitecture="default"
+                       binaryPath="Application/Debug"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="SwingRemind"
+                       osxSDK="default" osxCompatibility="10.8 SDK" osxArchitecture="default"
+                       binaryPath="Application/Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2012 targetFolder="Builds/VisualStudio2012" smallIcon="NEh68E" bigIcon="NEh68E"
+            toolset="v110_xp">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="1" optimisation="1" targetName="Reminder" binaryPath="Application/Debug"/>
+        <CONFIGURATION name="Release" winWarningLevel="4" generateManifest="1" winArchitecture="32-bit"
+                       isDebug="0" optimisation="2" targetName="Reminder" binaryPath="Application/Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2012>
+  </EXPORTFORMATS>
+  <MAINGROUP id="BeOFN5" name="Reminder">
+    <GROUP id="{89EB0D53-9D6F-19F4-12E6-978A080DFA4A}" name="BinaryData">
+      <FILE id="NEh68E" name="about.gif" compile="0" resource="1" file="BinaryData/about.gif"/>
+      <FILE id="Rrmk9Q" name="loop.ogg" compile="0" resource="1" file="BinaryData/loop.ogg"/>
+      <FILE id="pvVe6k" name="pause.gif" compile="0" resource="1" file="BinaryData/pause.gif"/>
+      <FILE id="KhvAlg" name="setup.gif" compile="0" resource="1" file="BinaryData/setup.gif"/>
+      <FILE id="JZeLNq" name="start.gif" compile="0" resource="1" file="BinaryData/start.gif"/>
+      <FILE id="ye0Tkb" name="stop.gif" compile="0" resource="1" file="BinaryData/stop.gif"/>
+      <FILE id="L0tJos" name="view.gif" compile="0" resource="1" file="BinaryData/view.gif"/>
+    </GROUP>
+    <GROUP id="{29240AC9-83D8-D146-67B7-C6AB398BF282}" name="Source">
+      <FILE id="zi27zv" name="DateAndTime.h" compile="0" resource="0" file="Source/DateAndTime.h"/>
+      <FILE id="sFdPCL" name="BaseComp.cpp" compile="1" resource="0" file="Source/BaseComp.cpp"/>
+      <FILE id="VmrMlb" name="BaseComp.h" compile="0" resource="0" file="Source/BaseComp.h"/>
+      <FILE id="UfbmqM" name="SoundPlayer.cpp" compile="1" resource="0" file="Source/SoundPlayer.cpp"/>
+      <FILE id="fYCjuX" name="SoundPlayer.h" compile="0" resource="0" file="Source/SoundPlayer.h"/>
+      <FILE id="NLRk9x" name="MainWindow.cpp" compile="1" resource="0" file="Source/MainWindow.cpp"/>
+      <FILE id="uFOPet" name="MainWindow.h" compile="0" resource="0" file="Source/MainWindow.h"/>
+      <FILE id="wFg4Bi" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="ndim1s" name="VisualWidgets.cpp" compile="1" resource="0"
+            file="Source/VisualWidgets.cpp"/>
+      <FILE id="Zfiibg" name="VisualWidgets.h" compile="0" resource="0" file="Source/VisualWidgets.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_devices" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_audio_formats" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_core" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_data_structures" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_events" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_graphics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_gui_basics" showAllCode="0" useLocalCopy="0"/>
+    <MODULE id="juce_gui_extra" showAllCode="0" useLocalCopy="0"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_USE_MP3AUDIOFORMAT="enabled" JUCE_USE_DIRECTWRITE="disabled"/>
+</JUCERPROJECT>
