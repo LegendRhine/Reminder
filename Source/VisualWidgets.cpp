@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 ====================================================================================
     Author: SwingCoder
     Email: SwingCoder2@gmail.com
@@ -84,16 +84,16 @@ VisualWidgets::VisualWidgets () :
 			img, 1.0f, Colours::yellowgreen.withAlpha(0.6f));
     }
 
-    bts[SETUP]->setTooltip(L"ÉèÖÃ¹¤×÷Ê±¼ä");
-    bts[STARTANDPAUSE]->setTooltip(L"¿ªÊ¼/ÔİÍ£");
-    bts[STOP]->setTooltip(L"Í£Ö¹ÌáĞÑ");
-    bts[VIEW]->setTooltip(L"²é¿´ÌáĞÑ¼ÇÂ¼");
-    bts[ABOUT]->setTooltip(L"¹ØÓÚ");
+    bts[SETUP]->setTooltip(L"è®¾ç½®å·¥ä½œæ—¶é—´");
+    bts[STARTANDPAUSE]->setTooltip(L"å¼€å§‹/æš‚åœ");
+    bts[STOP]->setTooltip(L"åœæ­¢æé†’");
+    bts[VIEW]->setTooltip(L"æŸ¥çœ‹æé†’è®°å½•");
+    bts[ABOUT]->setTooltip(L"å…³äº");
     bts[ABOUT]->addShortcut(KeyPress(KeyPress::spaceKey));
 
-    dateAndTimeLb->setTooltip(L"µ±Ç°ÈÕÆÚºÍÊ±¼ä");
-    currentTimingLb->setTooltip(L"Ê£ÓàÊ±¼ä");
-    processbar->setTooltip(L"½ø¶ÈÖ¸Ê¾Ìõ");
+    dateAndTimeLb->setTooltip(L"å½“å‰æ—¥æœŸå’Œæ—¶é—´");
+    currentTimingLb->setTooltip(L"å‰©ä½™æ—¶é—´");
+    processbar->setTooltip(L"è¿›åº¦æŒ‡ç¤ºæ¡");
 
     setSize(NUMS * 68, 200);
     setVisible(true);
@@ -103,7 +103,7 @@ VisualWidgets::VisualWidgets () :
     processbar->setBounds(0, dateAndTimeLb->getBottom() + 25, getWidth(), 10);    
     currentTimingLb->setBounds(0, processbar->getBottom() + 10, getWidth(), 50);
 
-    // ¼ÇÂ¼Æô¶¯Ê±¼äµã
+    // è®°å½•å¯åŠ¨æ—¶é—´ç‚¹
     String s = DateAndTime::getTime(false, true);
     timePoint.add(s);
 
@@ -133,7 +133,7 @@ void VisualWidgets::buttonClicked(Button* button)
     else if (bts[STOP] == button && !isStop)
     {
         if (AlertWindow::showOkCancelBox (AlertWindow::QuestionIcon, 
-            L"Ñ¯ÎÊ", L"ÒªÍ£Ö¹ÌáĞÑÂğ£¿", L"È·ÈÏ", L"È¡Ïû", this, nullptr))
+            L"è¯¢é—®", L"è¦åœæ­¢æé†’å—ï¼Ÿ", L"ç¡®è®¤", L"å–æ¶ˆ", this, nullptr))
         {
             isStop = true;
             setImgOfStartBt(true);
@@ -149,15 +149,15 @@ void VisualWidgets::buttonClicked(Button* button)
     // about button..
     else if (bts[ABOUT] == button)
     {
-        String s = TRANS(L"×÷Õß");
+        String s = TRANS(L"ä½œè€…");
         s << ": SwingCoder" << "\n" <<
             TRANS("E-mail") << ": underwaySoft@126.com" << "\n\n" << 
-            TRANS(L"(C)2010 °æÈ¨ËùÓĞ");
+            TRANS(L"(C)2010 ç‰ˆæƒæ‰€æœ‰");
 
         AlertWindow::showMessageBoxAsync (AlertWindow::InfoIcon,
-            L"¹ØÓÚ...", s, L"È·¶¨");
+            L"å…³äº...", s, L"ç¡®å®š");
     }
-    // ²é¿´±¾´ÎÔËĞĞÆÚ¼äµÄĞİÏ¢Ê±¼äµã
+    // æŸ¥çœ‹æœ¬æ¬¡è¿è¡ŒæœŸé—´çš„ä¼‘æ¯æ—¶é—´ç‚¹
     else if (bts[VIEW] == button)
     {
         viewTimePoint();
@@ -228,7 +228,7 @@ void VisualWidgets::remind()
     soundPlayer->play(audioStream);
 
     AlertWindow::showMessageBox(AlertWindow::WarningIcon,
-        L"Ê±¼äµ½£¡", L"¸Ã»î¶¯»î¶¯½î¹ÇÁË£¡", L"È·¶¨");
+        L"æ—¶é—´åˆ°ï¼", L"è¯¥æ´»åŠ¨æ´»åŠ¨ç­‹éª¨äº†ï¼", L"ç¡®å®š");
 
     timePoint.add(DateAndTime::getTime(false, true));
 }
@@ -239,7 +239,7 @@ void VisualWidgets::setupTime()
 
     for (int i = 1; i < 11; ++i)
     {
-        m.addItem(i, String(i * 30) + L" ·ÖÖÓ", true, (totalSec / (30 * 60)) == i);
+        m.addItem(i, String(i * 30) + L" åˆ†é’Ÿ", true, (totalSec / (30 * 60)) == i);
     }
 
     int result = m.show();
