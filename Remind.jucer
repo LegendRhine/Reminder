@@ -6,10 +6,10 @@
     <XCODE_MAC targetFolder="Builds/MacOSX" objCExtraSuffix="Ngr5ZL" smallIcon="diSAvT"
                bigIcon="NEh68E">
       <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="SwingRemind"
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Reminder"
                        osxSDK="default" osxCompatibility="10.8 SDK" osxArchitecture="default"
                        binaryPath="Application/Debug"/>
-        <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="SwingRemind"
+        <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="Reminder"
                        osxSDK="default" osxCompatibility="10.8 SDK" osxArchitecture="default"
                        binaryPath="Application/Release"/>
       </CONFIGURATIONS>
